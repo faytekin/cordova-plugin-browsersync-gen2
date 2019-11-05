@@ -3,6 +3,9 @@
 [![dependencies Status](https://david-dm.org/nparashuram/cordova-plugin-browsersync/status.svg)](https://david-dm.org/nparashuram/cordova-plugin-browsersync)
 [![devDependencies Status](https://david-dm.org/nparashuram/cordova-plugin-browsersync/dev-status.svg)](https://david-dm.org/nparashuram/cordova-plugin-browsersync?type=dev)
 
+This is a fork of original Cordova Browser-Sync Plugin 0.1.8, developed by nparashuram.
+The purpose of this fork is to become compatible with latest version of Apache Cordova.
+
 Integrating [BrowserSync](http://browsersync.io) into your Cordova workflow.
 
 - Watch files in the `www` folder and automatically reload HTML and CSS in all connected devices

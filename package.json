@@ -1,13 +1,13 @@
 {
-  "name": "cordova-plugin-browsersync",
-  "id": "cordova-plugin-browsersync",
-  "version": "0.1.8",
-  "description": "Cordova Plugin to integrate browser-sync in the workflow",
+  "name": "cordova-plugin-browser-sync",
+  "id": "cordova-plugin-browser-sync",
+  "version": "0.2.0",
+  "description": "A fork of original Cordova Plugin to integrate browser-sync in the workflow",
   "main": "lib/index.js",
-  "author": "Parashuram <code@nparashuram.com>",
+  "author": "Dimitris - Rafail Katsampas <katsampasdr@gmail.com>",
   "license": "Apache-2.0",
   "cordova": {
-    "id": "cordova-plugin-browsersync",
+    "id": "cordova-plugin-browser-sync",
     "platforms": [
       "android",
       "ios"
@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nparashuram/cordova-plugin-browsersync.git"
+    "url": "https://github.com/DimitrisRK/cordova-plugin-browser-sync.git"
   },
   "dependencies": {
     "browser-sync": "^2.18.13",
