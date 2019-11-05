@@ -24,12 +24,12 @@
     "url": "https://github.com/DimitrisRK/cordova-plugin-browser-sync.git"
   },
   "dependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.26.0",
     "cheerio": "^1.0.0-rc.2",
     "csp-parse": "0.0.2",
     "elementtree": "^0.1.6",
     "glob": "^7.1.2",
-    "npm": "^6.12.1",
+    "npm": "^6.12.0",
     "plist": "^2.1.0",
     "q": "^1.4.1"
   },
