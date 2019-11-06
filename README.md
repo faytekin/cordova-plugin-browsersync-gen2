@@ -30,30 +30,7 @@ This simplest way to integrate this in your Cordova workflow is to add it as a p
 cordova plugin add cordova-plugin-browser-sync
 ```
 
-and then run run the cordova with `cordova run -- --live-reload`.
-
-#### Note
-
-If you ran into the error like below when you executed `"cordova plugin add cordova-plugin-browser-sync"` command,
-
-```
-Failed to install 'cordova-plugin-browser-sync': Error: Cannot find module 'npm'
-```
-
-Please try to upgrade `npm` command version which is your system global installed with following command.
-
-```
-npm install -g npm
-```
-
-I have not confirmed anything, but this error can be caused by a version of the `npm` module that is mismatched between globally installed and locally installed on the project.
-
-### As a Cordova project hook
-Clone this repo and run `npm run createHook` to get a `after_prepare.js`. Add this file as an `after_prepare` [hook](http://cordova.apache.org/docs/en/edge/guide_appdev_hooks_index.md.html) to your config.xml. For example:
-
-```
-<hook type="after_prepare" src="scripts/after_prepare.js" />
-```
+and then run the cordova with `cordova run -- --live-reload`.
 
 ### Integrate into your workflow
 You can also `require('cordova-plugin-browser-sync')` in your node module and use the `changeHost` function and `browserSyncServer` directly in your existing workflow.
