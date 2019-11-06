@@ -27,11 +27,11 @@ The presence of this `--live-reload` flag triggers the live reload workflow. Wit
 The simplest way to integrate this in your Cordova workflow is to add it as a plugin
 
 ```
-cordova plugin add cordova-plugin-browser-sync
+cordova plugin add cordova-plugin-browsersync-gen2
 ```
 or
 ```
-cordova plugin add https://github.com/DimitrisRK/cordova-plugin-browser-sync.git
+cordova plugin add https://github.com/DimitrisRK/cordova-plugin-browsersync-gen2.git
 ```
 
 and then run the cordova command with `--live-reload`. Samples:
@@ -43,7 +43,7 @@ cordova run --live-reload (will run project using all platforms)
 ```
 
 ### Integrate into your workflow
-You can also `require('cordova-plugin-browser-sync')` in your node module and use the `changeHost` function and `browserSyncServer` directly in your existing workflow.
+You can also `require('cordova-plugin-browsersync-gen2')` in your node module and use the `changeHost` function and `browserSyncServer` directly in your existing workflow.
 
 ## Options
 
