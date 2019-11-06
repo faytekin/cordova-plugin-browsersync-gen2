@@ -15,9 +15,9 @@ Here is a [blog post](http://blog.nparashuram.com/2015/08/using-browser-sync-wit
 
 [![Cordova Browser-Sync Plugin demo video](http://img.youtube.com/vi/XTXYhYS2m0c/0.jpg)](http://www.youtube.com/watch?v=XTXYhYS2m0c)
 
-## Usage
+## Usage - Installation
 
-There are three ways to use the code in this plugin. Ensure that you have added the `ws:` and `unsafe-inline` CSP policies to your `default-src` section of the CSP meta tag (`<meta content=...>`) in index.html file.
+First of all, ensure that you have added the `script-src 'self' 'unsafe-inline';` section inside CSP meta tag (`<meta content=...>`) in index.html file. This is really important for browser-sync to refresh browsers.
 
 > Note that a `-- --live-reload` may need to be passed to `cordova run` command.
 
