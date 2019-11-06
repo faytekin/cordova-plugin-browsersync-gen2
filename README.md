@@ -19,7 +19,7 @@ Here is a [blog post](http://blog.nparashuram.com/2015/08/using-browser-sync-wit
 
 First of all, ensure that you have added the `script-src 'self' 'unsafe-inline';` section inside CSP meta tag (`<meta content=...>`) in index.html file. This is really important for browser-sync to refresh browsers.
 
-> Note that a `-- --live-reload` may need to be passed to `cordova run` command.
+> Note that a `--live-reload` parameter is required to include in `cordova run` command.
 
 The presence of this `--live-reload` flag triggers the live reload workflow. Without this flag, the project remains unchanged. This way, the plugin does not have to be removed before packaging it for final deployment.
 
@@ -30,7 +30,14 @@ This simplest way to integrate this in your Cordova workflow is to add it as a p
 cordova plugin add cordova-plugin-browser-sync
 ```
 
-and then run the cordova with `cordova run -- --live-reload`.
+and then run the cordova with `cordova run <platform_name> --live-reload`.
+Samples:
+```
+cordova run browser --live-reload
+cordova run android --live-reload
+cordova run ios --live-reload
+cordova run --live-reload (will run project using all platforms)
+```
 
 ### Integrate into your workflow
 You can also `require('cordova-plugin-browser-sync')` in your node module and use the `changeHost` function and `browserSyncServer` directly in your existing workflow.
@@ -41,7 +48,7 @@ You can also `require('cordova-plugin-browser-sync')` in your node module and us
 In many cases other hooks may copy over JS, CSS or image assets into folders like `www\lib`, typically from locations like `bower_components`. These hooks may run at `after_prepare` and hence should be ignored in the live reload workflow. To achieve this, run the command as
 
 ```
-cordova run -- --live-reload --ignore=lib/**/*.*
+cordova run --live-reload --ignore=lib/**/*.*
 ```
 
 The `--ignore` commands takes an [anymatch](https://github.com/es128/anymatch) compatible destination relative to the `www` folder.
@@ -52,7 +59,7 @@ Sometimes, depending on your network, your OS will report multiple external IP a
 To override this behaviour and manually select which host you want to use for the external interface, use the `--host` option, for example:
 
 ```
-cordova run -- --live-reload --host=192.168.1.1
+cordova run --live-reload --host=192.168.1.1
 ```
 
 ### Setting custom port
@@ -60,7 +67,7 @@ If you need to forward ports from your local computer to the device because the 
 If this happens the problem could be the `3000` port. Then you can try another one for example `8090` which should work then.
 
 ```
-cordova run -- --live-reload --port=8090
+cordova run --live-reload --port=8090
 ```
 
 ### Setting custom index file
@@ -68,7 +75,7 @@ If you do not have "index.html" in your `config.xml` under `content` node then y
 Please use the `--index` option.
 
 ```
-cordova run -- --live-reload --index=content.html
+cordova run --live-reload --index=content.html
 ```
 
 ### Enable https
@@ -76,5 +83,5 @@ If you need https you can enable it with this option.
 You can use `--https` for example.
 
 ```
-cordova run -- --live-reload --https
+cordova run --live-reload --https
 ```
