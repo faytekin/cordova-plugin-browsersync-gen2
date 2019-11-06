@@ -24,10 +24,14 @@ First of all, ensure that you have added the `script-src 'self' 'unsafe-inline';
 The presence of this `--live-reload` flag triggers the live reload workflow. Without this flag, the project remains unchanged. This way, the plugin does not have to be removed before packaging it for final deployment.
 
 ### Install as a Cordova plugin (easiest)
-This simplest way to integrate this in your Cordova workflow is to add it as a plugin
+The simplest way to integrate this in your Cordova workflow is to add it as a plugin
 
 ```
 cordova plugin add cordova-plugin-browser-sync
+```
+or
+```
+cordova plugin add https://github.com/DimitrisRK/cordova-plugin-browser-sync.git
 ```
 
 and then run the cordova command with `--live-reload`. Samples:
