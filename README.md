@@ -10,11 +10,6 @@ Integrating [BrowserSync](http://browsersync.io) into your Cordova workflow.
 - Synchronize scrolls, clicks and form inputs across multiple devices.
 - Supports real devices and emulators for iOS and Android platforms
 
-## Demo
-Here is a [blog post](http://blog.nparashuram.com/2015/08/using-browser-sync-with-cordova.html) explaining the plugin and its internals.
-
-[![Cordova Browser-Sync Plugin demo video](http://img.youtube.com/vi/XTXYhYS2m0c/0.jpg)](http://www.youtube.com/watch?v=XTXYhYS2m0c)
-
 ## Usage - Installation
 
 First of all, ensure that you have added the `script-src 'self' 'unsafe-inline';` section inside CSP meta tag (`<meta content=...>`) in index.html file. This is really important for browser-sync to refresh browsers.
