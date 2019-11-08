@@ -12,7 +12,7 @@ Integrating [BrowserSync](http://browsersync.io) into your Cordova workflow.
 
 ## Usage - Installation
 
-First of all, ensure that you have added the `script-src 'self' 'unsafe-inline';` section inside CSP meta tag (`<meta content=...>`) in index.html file. This is really important for browser-sync to refresh browsers.
+This is now done automatically but if your browser does still not refresh, try adding the `script-src 'self' 'unsafe-inline';` section inside CSP meta tag (`<meta content=...>`) in index.html file. This is really important for browser-sync to refresh browsers.
 
 > Note that a `--live-reload` parameter is required to include in `cordova run` command.
 
