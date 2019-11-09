@@ -37,10 +37,21 @@ cordova run ios --live-reload
 cordova run --live-reload (will run project using all platforms)
 ```
 
+## *NEW*
+From now on, plugin supports --live-reload with `cordova serve` command.
+```
+cordova serve --live-reload
+```
+In that case, default static page server will never run and that's how it should be.
+
+*Note: Setting port using Cordova docs format `cordova server [port]` will not work.
+However, you can try setting port using the browser-sync parameter example mentioned below.
+
 ### Integrate into your workflow
 You can also `require('cordova-plugin-browsersync-gen2')` in your node module and use the `changeHost` function and `browserSyncServer` directly in your existing workflow.
 
 ## Options
+In general, plugin supports most of browser-sync parameters (if not all) in --parameter or --parameter=value formats (no need for quotes).
 
 ### Ignoring files
 In many cases other hooks may copy over JS, CSS or image assets into folders like `www\lib`, typically from locations like `bower_components`. These hooks may run at `after_prepare` and hence should be ignored in the live reload workflow. To achieve this, run the command as
