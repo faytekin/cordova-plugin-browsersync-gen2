@@ -47,9 +47,6 @@ In that case, default static page server will never run and that's how it should
 *Note: Setting port using Cordova docs format `cordova server [port]` will not work.
 However, you can try setting port using the browser-sync parameter example mentioned below.
 
-### Integrate into your workflow
-You can also `require('cordova-plugin-browsersync-gen2')` in your node module and use the `changeHost` function and `browserSyncServer` directly in your existing workflow.
-
 ## Options
 In general, plugin supports most of browser-sync parameters (if not all) in --parameter or --parameter=value formats (no need for quotes).
 
