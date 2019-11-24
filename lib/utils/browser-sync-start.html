@@ -53,11 +53,15 @@
         animation: sk-rotateplane 1.2s infinite ease-in-out;
     }
     
-    #error {
-        font-size: 1.5em;
-        line-height: 1.3em;
-        display: none;
-        color: #d35400;
+    #skip
+    {
+        margin: 3em;
+    }
+
+    #skip a
+    {
+        color: #fff;
+        font-size: 2em;
     }
     
     .connection {
@@ -120,9 +124,8 @@
             </a>
         </div>
     </div>
-    <div id="error">
-        Could not connect to the browser-sync server.
-        <br/>Check if you can access any of the
+    <div id="skip">
+        <a href="index.html">Skip</a>
     </div>
     <script type="text/javascript">
     var SERVERS = __SERVERS__;
@@ -131,12 +134,14 @@
     var html = [];
     var resultCount = 0;
 
-    if (Object.keys(SERVERS).length === 0) {
+    if (Object.keys(SERVERS).length === 0)
+    {
         // reload the page if the servers are not set yet
         setTimeout(window.location.reload.bind(window.location), 200);
     }
 
-    for (var key in SERVERS) {
+    for (var key in SERVERS)
+    {
         html.push(tmpl
             .replace(/__KEY__/g, key)
             .replace(/__VALUE__/g, SERVERS[key]));
@@ -147,18 +152,22 @@
 
     var results = {};
 
-    function onAjax(type, status) {
-        return function(response) {
-            if(status && response.status === 404) {
+    function onAjax(type, status)
+    {
+        return function(response)
+        {
+            if(status && response.status === 404)
+            {
                 status = false;
             }
-            document.getElementById('value-' + type).innerHTML = status ? ' &#x2713;' : '&#x274C;'
+            document.getElementById('value-' + type).innerHTML = status ? ' &#x2713;' : '&#x274C;';
             results[type] = status;
             resultCount--;
-            if (resultCount <= 0) {
+            if (resultCount <= 0)
+            {
                 onResult(results);
             }
-        }
+        };
     }
 
     function checkConnection(type) {
@@ -173,14 +182,13 @@
     function onResult(results) {
         var resultOrder = ['local', 'external', 'tunnel'];
         var result = null;
-        for (var i = 0; i < resultOrder.length; i++) {
-            if (results[resultOrder[i]]) {
+        for (var i = 0; i < resultOrder.length; i++)
+        {
+            if (results[resultOrder[i]])
+            {
                 result = resultOrder[i];
                 break;
             }
-        }
-        if (result == null) {
-            document.getElementById('error').style.display = 'block';
         }
     }
     </script>
